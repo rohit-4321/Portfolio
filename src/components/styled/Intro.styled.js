@@ -1,13 +1,25 @@
 import styled from "styled-components";
 
 export const StyledIntro = styled.div`
-  width: 70%;
-  margin-left: 15%;
-  padding-top: 15%;
+  width: 100%;
+  /* padding-top: 15%; */
   height: 100vh;
-  box-sizing: border-box;
-
+  position: relative;
   /* Common style for p tag. */
+`;
+
+export const ContentStyled = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  @media only screen and (max-width: 700px) {
+    & {
+      left: 5%;
+      right: 1%;
+    }
+  }
   p {
     padding: 0px;
     font-family: sans-serif;
@@ -18,7 +30,7 @@ export const StyledIntro = styled.div`
   /* Hii, I am */
   & p:nth-of-type(1) {
     color: #2dffd9;
-    font-size: clamp(1.2rem, 2.7rem, 2vw);
+    font-size: clamp(1.1rem, 1.5vw, 2rem);
     font-weight: 550;
   }
 
@@ -26,7 +38,7 @@ export const StyledIntro = styled.div`
   & p:nth-of-type(2) {
     color: white;
     font-weight: 900;
-    font-size: clamp(2rem, 3.1rem, 3.5vw);
+    font-size: clamp(2.4rem, 3vw, 6rem);
     margin-top: 5px;
   }
 
@@ -34,28 +46,31 @@ export const StyledIntro = styled.div`
   & p:nth-of-type(3) {
     color: #a5d8d8;
     font-weight: 600;
-    font-size: clamp(2rem, 3.1rem, 3.5vw);
+    font-size: clamp(1.6rem, 3vw, 4rem);
     margin-top: 10px;
   }
   /* Description */
   & p:nth-of-type(4) {
     color: #ccdada;
     font-weight: 580;
-    font-size: clamp(0.9rem, 1.1rem, 3vw);
+    font-size: clamp(1rem, 1.5vw, 2rem);
     width: 70%;
     margin-top: 12px;
     margin-bottom: 10px;
   }
-  button {
-    margin-top: 12px;
-    padding: 5px 30px;
-    border: none;
-    border-radius: 8px;
-    background-color: #dcb2eb;
-  }
-  button span {
+`;
+export const ResumeButton = styled.button`
+  margin-top: 12px;
+  padding: 5px 30px;
+  border: none;
+  opacity: 0;
+  transform: translateX(-20px);
+  display: inline;
+  border-radius: 8px;
+  background-color: #dcb2eb;
+  span {
     font-family: sans-serif;
     font-weight: bold;
-    font-size: clamp(1.8rem, 1.5rem, 3vw);
+    font-size: clamp(1.4rem, 2vw, 2.5rem);
   }
 `;

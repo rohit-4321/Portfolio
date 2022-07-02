@@ -1,11 +1,19 @@
-import { useState } from "react";
+import Aos from "aos";
+import { useEffect, useState } from "react";
 import "./App.css";
+import { ParticalComponent } from "./components/common/Partical";
+
 import { MainContainer } from "./components/main/MainContainer";
 import { NavBar } from "./components/nav/NavBar";
 import { NavHeader } from "./components/nav/Navheader";
-import { BackGroundStyled } from "./components/styled/BackGround.styled";
 
 function App() {
+  useEffect(() => {
+    Aos.init({
+      once: true,
+    });
+    Aos.refreshHard();
+  }, []);
   const [isnavOpen, setNavState] = useState(false);
 
   const toggleNavBar = () => {
@@ -13,10 +21,10 @@ function App() {
   };
   return (
     <div className="App">
-      <BackGroundStyled />
+      <ParticalComponent />
       <NavBar openState={isnavOpen} />
       <NavHeader onIconClicked={toggleNavBar} />
-      <MainContainer />
+      <MainContainer navState={isnavOpen} />
     </div>
   );
 }
