@@ -16,7 +16,7 @@ export const ProjectGridContainer = styled.div`
       grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-row-gap: 4.5rem;
       grid-column-gap: 0px;
-      width: 70vw;
+      width: 85vw;
     }
   }
 `;

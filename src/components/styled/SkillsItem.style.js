@@ -25,6 +25,11 @@ export const SkillsBar = styled.div`
   border: 0.5px solid #00ffd1;
   box-shadow: inset 0px 0px 9px 1px black;
   opacity: 0.95;
+  @media only screen and (max-width: 700px) {
+    & {
+      height: 1.2rem;
+    }
+  }
 `;
 
 export const Indicator = styled.div`
@@ -36,10 +41,11 @@ export const Indicator = styled.div`
   background-color: #18dbb8;
   border-radius: 40px;
   box-shadow: inset 0px 0px 5px 1px black;
+  height: 100%;
 
   @media only screen and (max-width: 700px) {
     & {
-      height: 1.2rem;
+      /* height: 1.2rem; */
     }
   }
   &.aos-animate {

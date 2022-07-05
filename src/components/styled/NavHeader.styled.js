@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Navheader = styled.div`
   position: fixed;
   display: none;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   backdrop-filter: blur(50px);
   top: 0%;
   z-index: 1;

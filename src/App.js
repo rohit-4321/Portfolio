@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <ParticalComponent />
       <NavBar openState={isnavOpen} />
-      <NavHeader onIconClicked={toggleNavBar} />
+      <NavHeader onIconClicked={toggleNavBar} navState={isnavOpen} />
       <MainContainer navState={isnavOpen} />
     </div>
   );
