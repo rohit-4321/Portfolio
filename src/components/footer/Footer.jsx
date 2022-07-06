@@ -14,7 +14,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.div`
   margin-top: 6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   position: relative;
   display: flex;
   height: 2rem;

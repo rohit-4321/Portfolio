@@ -6,11 +6,6 @@ import styled, { css } from "styled-components";
 export const NavHeader = (props) => {
   return (
     <Navheader>
-      {/* <img
-        class="profilePic"
-        src={require("../../resources/R_icon.png")}
-        alt="UserImage"
-      ></img> */}
       <BurgerIcon
         onIconClick={props.onIconClicked}
         sideBarState={props.navState}

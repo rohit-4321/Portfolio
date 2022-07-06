@@ -13,6 +13,9 @@ body {
   background-color: #18182D;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 *{
   margin: 0px;
   padding:0px;
@@ -21,4 +24,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+/* ScrollBar  */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a9f1e0ca; 
+ 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffc3;  
 }

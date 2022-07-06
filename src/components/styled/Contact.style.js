@@ -100,10 +100,16 @@ export const IconContainerStyled = styled.div`
     width: 2.5rem;
     height: 2.5rem;
   }
+  a {
+    margin-left: 10%;
+  }
   @media only screen and (max-width: 700px) {
     & {
       width: auto;
       min-width: 0;
+    }
+    a {
+      margin-left: 15%;
     }
     img {
       position: relative;
@@ -179,4 +185,9 @@ export const StyledLoading = styled.div`
     }
   }
 `;
-// clamp( 1rem,13vw,20rem)
+export const ErrorStyled = styled.p`
+  margin: 3px 0;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: red;
+`;

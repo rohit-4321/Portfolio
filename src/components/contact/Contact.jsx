@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import emailjs from "@emailjs/browser";
 import TickSvg from "../../resources/tickmark.svg";
 import {
+  ErrorStyled,
   IconContainerStyled,
   InputMessageBox,
   InputStyled,
@@ -18,7 +19,7 @@ import { WrapperMain } from "../styled/MainContentWrapper.style";
 function Contact() {
   return (
     <>
-      <ContainerHeading heading={"Contact Me"} />
+      <ContainerHeading heading={"Contact Me"} id="contacts" />
       <WrapperMain>
         <MessageContainer />
       </WrapperMain>
@@ -32,9 +33,18 @@ const MessageContainer = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  const [fieldValid, setFieldValue] = useState(true);
+
   const [buttonState, setButtonState] = useState("idle");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (name === "" && email === "" && subject === "") {
+      setFieldValue(false);
+      return;
+    }
+    setFieldValue(true);
+
     setButtonState("loading");
     emailjs
       .send(
@@ -62,59 +72,79 @@ const MessageContainer = () => {
         console.log(err);
       });
   };
+
   const onTextChange = (e, setText) => {
     setText(e.target.value);
   };
 
   return (
-    <StyledForm
-      onSubmit={handleSubmit}
-      // data-aos="zoom-in"
-    >
-      <MessageContainerStyled>
-        <InputStyled
-          placeholder={"Name"}
-          value={name}
-          onChange={(e) => onTextChange(e, setName)}
-        />
-        <InputStyled
-          value={email}
-          placeholder={"Email"}
-          type="email"
-          onChange={(e) => onTextChange(e, setEmail)}
-        />
+    <>
+      <StyledForm onSubmit={handleSubmit} data-aos="zoom-in">
+        <MessageContainerStyled>
+          <InputStyled
+            placeholder={"Name"}
+            value={name}
+            onChange={(e) => onTextChange(e, setName)}
+          />
+          <InputStyled
+            value={email}
+            placeholder={"Email"}
+            type="email"
+            onChange={(e) => onTextChange(e, setEmail)}
+          />
 
-        <InputStyled
-          value={subject}
-          placeholder={"Subject"}
-          onChange={(e) => onTextChange(e, setSubject)}
-        />
-        <InputMessageBox
-          value={message}
-          placeholder={"Message"}
-          onChange={(e) => onTextChange(e, setMessage)}
-        />
-        <SendButtonStyled type="submit">
-          {buttonState === "idle" ? (
-            <span>Send</span>
-          ) : buttonState === "loading" ? (
-            <StyledLoading />
-          ) : (
-            <StyledSvg src={TickSvg} />
-          )}
-        </SendButtonStyled>
-        <IconContainer />
-      </MessageContainerStyled>
-    </StyledForm>
+          <InputStyled
+            value={subject}
+            placeholder={"Subject"}
+            onChange={(e) => onTextChange(e, setSubject)}
+          />
+          <InputMessageBox
+            value={message}
+            placeholder={"Message"}
+            onChange={(e) => onTextChange(e, setMessage)}
+          />
+          <SendButtonStyled type="submit">
+            {buttonState === "idle" ? (
+              <span>Send</span>
+            ) : buttonState === "loading" ? (
+              <StyledLoading />
+            ) : (
+              <StyledSvg src={TickSvg} />
+            )}
+          </SendButtonStyled>
+          <IconContainer />
+        </MessageContainerStyled>
+      </StyledForm>
+      {fieldValid ? "" : <ErrorStyled>Fields are empty!</ErrorStyled>}
+    </>
   );
 };
 
 const IconContainer = () => {
   return (
     <IconContainerStyled>
-      <img src={require("../../resources/github.png")} alt="img" />
-      <img src={require("../../resources/gmails.png")} alt="img" />
-      <img src={require("../../resources/linkedins.png")} alt="img" />
+      <a
+        target="_blank"
+        href="https://github.com/rohit-4321"
+        rel="noopener noreferrer"
+      >
+        <img src={require("../../resources/github.png")} alt="img" />
+      </a>
+      <a
+        target="_blank"
+        href="mailto:rohit4444choudhary@gmail.com?subject=I want talk"
+        title="Share by Email"
+        rel="noopener noreferrer"
+      >
+        <img src={require("../../resources/gmails.png")} alt="img" />
+      </a>
+      <a
+        target="_blank"
+        href="https://linkedin.com/in/rohit-choudhary-b0642821a"
+        rel="noopener noreferrer"
+      >
+        <img src={require("../../resources/linkedins.png")} alt="img" />
+      </a>
     </IconContainerStyled>
   );
 };

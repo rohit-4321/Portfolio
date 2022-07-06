@@ -1,5 +1,5 @@
 import "aos/dist/aos.css";
-import Aos from "aos";
+import "aos/dist/aos.css";
 import React from "react";
 import ContainerHeading from "../common/ContainerHeading";
 import { WrapperMain } from "../styled/MainContentWrapper.style";
@@ -10,8 +10,8 @@ import {
   ProjectItem,
   ProjectGridContainer,
   ProjectTitle,
+  ProjectLink,
 } from "../styled/ProjectItemContainer.style";
-import { useEffect } from "react";
 
 function Projects() {
   return (
@@ -22,24 +22,37 @@ function Projects() {
           <ProjectItemContent
             title={"Snake Game "}
             imgScr={require("../../resources/snake_icon.png")}
-            discription="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+            discription="This is a simple snake game in Android which uses Java Thread , android canvas , SurfaceView etc.I learn about how multithreading works in java through this projects. It also uses share Preference to store highest score in the game."
           />
           <ProjectItemContent
             title={"My Dictionary"}
             imgScr={require("../../resources/icon.png")}
-            discription="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+            discription="This is a Online Dictionary which fetch word meaning from Remote Server. I have used Retrofit Library for making meaning request and Room Database for storing the meaning of a word in local storage. I have use google translation Api for translating meaning in more than 10 language."
+            url=" https://play.google.com/store/apps/details?id=com.elite.mydictionary"
           />
 
           <ProjectItemContent
-            title={"My Dictionary"}
+            title={"Matrix Calculator"}
             imgScr={require("../../resources/icon.png")}
-            discription="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+            discription="This matrix calculator used for advance matrix operation and basic arithmetic operation. UI is mostly 
+            build using Jetpack Compose UI Library and Jetpack Navigation. We can calculate Inverse of a 
+            matrix and determinant of a matrix and basic arithmetic calculation."
           />
           <ProjectItemContent
-            title={"Snake Game"}
+            title={"Photo Gallary"}
             imgScr={require("../../resources/snake_icon.png")}
-            discription="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+            discription="This project was build using ReactJs and plain Css. It uses firebase authentication for every users.It also uses firestore database and storage for storing all the photos of every users separately."
           />
+          <ProjectItemContent
+            title={"TakeTask"}
+            imgScr={require("../../resources/snake_icon.png")}
+            discription="This project was build on TypeScript and ReactJs. It Store user's Tasks and allow them to mark complete, edit, delete task from the List."
+          />
+          {/* <ProjectItemContent
+            title={"Portfolio"}
+            imgScr={require("../../resources/snake_icon.png")}
+            discription="This is a responsive Personal Portfolio website. I use ReactJs and Styled Component for the the front-end."
+          /> */}
         </ProjectGridContainer>
       </WrapperMain>
     </>
@@ -48,19 +61,26 @@ function Projects() {
 
 const ProjectItemContent = (props) => {
   return (
-    <ProjectItem data-aos="fade-in" data-aos-once="false">
-      <ItemHeader>
-        <ProjectImg
-          src={props.imgScr}
-          alt="icon"
-          width="50"
-          height="50"
-        ></ProjectImg>
-        <ProjectTitle>{props.title}</ProjectTitle>
-      </ItemHeader>
+    <ProjectLink
+      href={props.url}
+      target="_blank"
+      data-aos="fade-in"
+      data-aos-offset="60"
+    >
+      <ProjectItem>
+        <ItemHeader>
+          <ProjectImg
+            src={props.imgScr}
+            alt="icon"
+            width="50"
+            height="50"
+          ></ProjectImg>
+          <ProjectTitle>{props.title}</ProjectTitle>
+        </ItemHeader>
 
-      <ProjectDiscription>{props.discription}</ProjectDiscription>
-    </ProjectItem>
+        <ProjectDiscription>{props.discription}</ProjectDiscription>
+      </ProjectItem>
+    </ProjectLink>
   );
 };
 

@@ -13,7 +13,7 @@ import {
 function Skills() {
   return (
     <>
-      <ContainerHeading heading={"Skills"} />
+      <ContainerHeading heading={"Skills"} id="skills" />
       <WrapperMain>
         <ProjectGridContainer>
           <SkillItem name={"JAVA"} percentage={"98%"} />

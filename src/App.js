@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <ParticalComponent />
-      <NavBar openState={isnavOpen} />
+      <NavBar openState={isnavOpen} onTabClick={toggleNavBar} />
       <NavHeader onIconClicked={toggleNavBar} navState={isnavOpen} />
       <MainContainer navState={isnavOpen} />
     </div>

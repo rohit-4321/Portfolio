@@ -26,12 +26,22 @@ export const ProjectItem = styled.div`
   border-radius: 3%;
   padding: 25px 10%;
   box-shadow: 2px 2px 30px 9px #11111f;
-
+  transition: all 0.4s ease;
+  height: 100%;
   @media only screen and (max-width: 700px) {
     & {
       padding: 15px 5%;
     }
   }
+  &:hover {
+    transform: scale(1.05, 1.05);
+    background-color: #212139;
+    box-shadow: 0px 0px 30px 2px #11111f;
+  }
+`;
+
+export const ProjectLink = styled.a`
+  text-decoration: none;
 `;
 
 export const ProjectImg = styled.img`
@@ -71,6 +81,7 @@ export const ProjectDiscription = styled.p`
   @media only screen and (max-width: 700px) {
     & {
       font-size: max(2.5vw, 0.8rem);
+      font-weight: 300;
     }
   }
 `;
