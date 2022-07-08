@@ -5,7 +5,7 @@ export const NavBar = (props) => {
     <Navbar isOpen={props.openState}>
       <img
         class="profilePic"
-        src={require("../../resources/r_icon.png")}
+        src={require("../../resources/R_icon.png")}
         alt="UserImage"
       ></img>
       <NavLinksConatiner isOpen={props.openState}>
