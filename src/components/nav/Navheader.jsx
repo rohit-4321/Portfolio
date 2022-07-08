@@ -1,6 +1,5 @@
-import { GiHamburgerMenu } from "react-icons/gi";
 import { Navheader } from "../styled/NavHeader.styled";
-import Burger from "../../resources/burger.svg";
+
 import styled, { css } from "styled-components";
 
 export const NavHeader = (props) => {

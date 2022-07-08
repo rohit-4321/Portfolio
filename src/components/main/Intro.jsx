@@ -5,8 +5,6 @@ import {
 } from "../styled/Intro.styled";
 import { WrapperMain } from "../styled/MainContentWrapper.style";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-import Aos from "aos";
 import pdf from "./rohit_resume_.pdf";
 
 export const Intro = () => {

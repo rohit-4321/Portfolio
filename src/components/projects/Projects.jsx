@@ -1,5 +1,5 @@
 import "aos/dist/aos.css";
-import "aos/dist/aos.css";
+
 import React from "react";
 import ContainerHeading from "../common/ContainerHeading";
 import { WrapperMain } from "../styled/MainContentWrapper.style";
