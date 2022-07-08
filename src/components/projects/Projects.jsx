@@ -21,6 +21,7 @@ function Projects() {
         <ProjectGridContainer>
           <ProjectItemContent
             title={"Snake Game "}
+            url={"https://github.com/rohit-4321/Snake-game-in-Android."}
             imgScr={require("../../resources/snake_icon.png")}
             discription="This is a simple snake game in Android which uses Java Thread , android canvas , SurfaceView etc.I learn about how multithreading works in java through this projects. It also uses share Preference to store highest score in the game."
           />
@@ -33,19 +34,22 @@ function Projects() {
 
           <ProjectItemContent
             title={"Matrix Calculator"}
-            imgScr={require("../../resources/icon.png")}
+            url={"https://github.com/rohit-4321/Matrix-Calculator"}
+            imgScr={require("../../resources/matrix_icon.png")}
             discription="This matrix calculator used for advance matrix operation and basic arithmetic operation. UI is mostly 
             build using Jetpack Compose UI Library and Jetpack Navigation. We can calculate Inverse of a 
             matrix and determinant of a matrix and basic arithmetic calculation."
           />
           <ProjectItemContent
             title={"Photo Gallary"}
-            imgScr={require("../../resources/snake_icon.png")}
+            url={"https://appphotogallery.netlify.app/"}
+            imgScr={require("../../resources/photo_gallary_icon.png")}
             discription="This project was build using ReactJs and plain Css. It uses firebase authentication for every users.It also uses firestore database and storage for storing all the photos of every users separately."
           />
           <ProjectItemContent
+            url={"https://github.com/rohit-4321/TakeTask"}
             title={"TakeTask"}
-            imgScr={require("../../resources/snake_icon.png")}
+            imgScr={require("../../resources/takeTask_icon.png")}
             discription="This project was build on TypeScript and ReactJs. It Store user's Tasks and allow them to mark complete, edit, delete task from the List."
           />
           {/* <ProjectItemContent

@@ -7,6 +7,7 @@ import { WrapperMain } from "../styled/MainContentWrapper.style";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import pdf from "./rohit_resume_.pdf";
 
 export const Intro = () => {
   return (
@@ -56,6 +57,9 @@ const ContentIntro = () => {
         great user experience.
       </p>
       <ResumeButton
+        href={pdf}
+        target="_blank"
+        rel="noreferrer"
         data-aos="zoom-in"
         data-aos-delay="750"
         data-aos-duration="1000"

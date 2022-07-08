@@ -81,11 +81,12 @@ export const ContentStyled = styled.div`
     }
   }
 `;
-export const ResumeButton = styled.button`
+export const ResumeButton = styled.a`
   margin-top: 20px;
   padding: 5px 30px;
   border: 2px solid #00ffd1;
   opacity: 0;
+  text-decoration: none;
   transform: translateX(-20px);
   display: inline;
   border-radius: 30px;

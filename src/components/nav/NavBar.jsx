@@ -19,15 +19,6 @@ export const NavBar = (props) => {
           About Me
         </a>
         <a
-          href="#skills"
-          className="navLinks"
-          onClick={() => {
-            props.onTabClick();
-          }}
-        >
-          Skills
-        </a>
-        <a
           href="#projects"
           className="navLinks"
           onClick={() => {
@@ -36,6 +27,16 @@ export const NavBar = (props) => {
         >
           Projects
         </a>
+        <a
+          href="#skills"
+          className="navLinks"
+          onClick={() => {
+            props.onTabClick();
+          }}
+        >
+          Skills
+        </a>
+
         <a
           href="#contacts"
           className="navLinks"

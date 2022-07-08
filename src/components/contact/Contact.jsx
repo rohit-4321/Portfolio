@@ -39,7 +39,7 @@ const MessageContainer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name === "" && email === "" && subject === "") {
+    if (name === "" || email === "" || subject === "") {
       setFieldValue(false);
       return;
     }
