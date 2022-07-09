@@ -41,7 +41,7 @@ function Projects() {
             matrix and determinant of a matrix and basic arithmetic calculation."
           />
           <ProjectItemContent
-            title={"Photo Gallary"}
+            title={"Photo Gallery"}
             url={"https://appphotogallery.netlify.app/"}
             imgScr={require("../../resources/photo_gallary_icon.png")}
             discription="This project was build using ReactJs and plain Css. It uses firebase authentication for every users.It also uses firestore database and storage for storing all the photos of every users separately."
