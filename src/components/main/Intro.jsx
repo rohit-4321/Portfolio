@@ -51,7 +51,7 @@ const ContentIntro = () => {
         data-aos-offset="0"
       >
         I am a technology enthusiast ,I love to code for website and Mobile
-        Apps. I am always excited to Web and Mobile Apps with great user
+        Apps. I am always excited to build Web and Mobile Apps with great user
         experience.
       </p>
       <ResumeButton
